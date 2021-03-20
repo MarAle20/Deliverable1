@@ -54,4 +54,4 @@ public class GroupOfCards
         size = givenSize;
     }
     
-}//end class
+}//end class and i made a change
