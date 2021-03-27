@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+import content.UnoCard;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -18,7 +19,7 @@ public class GroupOfCards
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
+    private ArrayList <UnoCard> groupOfCards;
     private int size;//the size of the grouping
     
     public GroupOfCards(int givenSize)
@@ -26,18 +27,27 @@ public class GroupOfCards
         size = givenSize;
     }
     
+    //Print out the whole groupOfCards
+    
+    public static void getAllCards(ArrayList<UnoCard> cards){
+        
+    }
+    
+    
+    
+    
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
      */
-    public ArrayList<Card> showCards()
+    public ArrayList<UnoCard> getGroupOfCards()
     {
-        return cards;
+        return groupOfCards;
     }
     
     public void shuffle()
     {
-        Collections.shuffle(cards);
+        Collections.shuffle(groupOfCards);
     }
 
     /**
