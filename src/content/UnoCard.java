@@ -12,7 +12,7 @@ public class UnoCard extends Card {
         RED,YELLOW,BLUE,GREEN
     }
     enum Symbol{
-        ZERO,ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,HEIGTH,NINE,DRAWTWO,REVERSE,SKIP,WILDCARD,FOURWILDCARD
+        ZERO,ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,DRAWTWO,REVERSE,SKIP,WILDCARD,FOURWILDCARD
     }
     
     Color color;
@@ -24,6 +24,41 @@ public class UnoCard extends Card {
     }
     
     
+    
+    //Compare two cards from one of the cards
+    
+    public boolean equals(UnoCard card){
+        boolean equal = false;
+            if((this.color == card.getColor()) || (this.symbol == card.getSymbol()) )
+                equal = true;
+            else
+                equal = false;       
+        return equal;
+    }
+    
+    //Campare two cards by themselves. 
+    public boolean equals(UnoCard cardOne, UnoCard two){
+        
+        boolean equal = false;
+        return equal;
+    }
+    
+    
+    
+    //Getter & Setter Method for Color and Symbol
+    public void setColor(Color color){
+        this.color =  color;
+    }
+    public void setSymbol(Symbol symbol){
+        this.symbol = symbol;
+    }
+    
+    public Color getColor(){
+        return this.color;
+    }
+    public Symbol getSymbol(){
+        return this.symbol;
+    }
     
     
     @Override

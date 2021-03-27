@@ -19,7 +19,7 @@ public class GroupOfCards
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <UnoCard> groupOfCards;
+    private ArrayList <UnoCard> groupOfCards = new ArrayList<>();
     private int size;//the size of the grouping
     
     public GroupOfCards(int givenSize)
@@ -27,10 +27,11 @@ public class GroupOfCards
         size = givenSize;
     }
     
-    //Print out the whole groupOfCards
+    //Print out all the cards that are contained in the group of cards.
     
-    public static void getAllCards(ArrayList<UnoCard> cards){
-        
+    public void showCards(ArrayList<UnoCard> cards){
+        for(int i = 0 ; i < cards.size();i++)
+            System.out.println(cards.get(i).toString());
     }
     
     
