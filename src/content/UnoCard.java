@@ -15,8 +15,8 @@ public class UnoCard extends Card {
         ZERO,ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,DRAWTWO,REVERSE,SKIP,WILDCARD,FOURWILDCARD
     }
     
-    Color color;
-    Symbol symbol;
+    private Color color;
+    private Symbol symbol;
     
     public UnoCard(Color color,Symbol symbol){
         this.color = color;

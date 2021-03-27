@@ -13,19 +13,17 @@ public class UnoGame {
     public static void main(String[] args) {
         
         DrawPile one = new DrawPile();
-        UnoCard card = new UnoCard(Color.BLUE,Symbol.ONE);
+        UnoCard card = new UnoCard(Color.RED,Symbol.ONE);
         
         System.out.println(one.drawPile);
         System.out.println(one.drawPile.size());
-        
         System.out.println("-------------------------------");
         
         System.out.println(one.drawPile.get(0).equals(card));
         
-        System.out.println("------------------------------");
+        System.out.println("------------------------");
         
         one.showDrawPile();
-        
         
         
         
