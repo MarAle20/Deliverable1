@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+import content.UnoPlayer;
 import java.util.ArrayList;
 
 /**
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public abstract class Game 
 {
     private final String gameName;//the title of the game
-    private ArrayList <Player> players;// the players of the game
+    private ArrayList <UnoPlayer> players;// the players of the game
     
     public Game(String givenName)
     {
@@ -34,7 +35,7 @@ public abstract class Game
      /**
      * @return the players of this game
      */
-    public ArrayList <Player> getPlayers() 
+    public ArrayList <UnoPlayer> getPlayers() 
     {
         return players;
     }
@@ -42,7 +43,7 @@ public abstract class Game
     /**
      * @param players the players of this game
      */
-    public void setPlayers(ArrayList <Player> players) 
+    public void setPlayers(ArrayList <UnoPlayer> players) 
     {
         this.players = players;
     }

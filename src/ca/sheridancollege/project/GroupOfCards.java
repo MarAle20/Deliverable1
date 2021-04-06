@@ -20,12 +20,14 @@ public class GroupOfCards
    
     //The group of cards, stored in an ArrayList
     private ArrayList <UnoCard> groupOfCards = new ArrayList<>();
-    private int size;//the size of the grouping
+    private int size;//the initial size of the grouping
     
     public GroupOfCards(int givenSize)
     {
         size = givenSize;
     }
+
+
     
     //Print out all the cards that are contained in the group of cards.
     

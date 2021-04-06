@@ -4,11 +4,18 @@
  */
 package content;
 
+import ca.sheridancollege.project.Game;
 import content.UnoCard.Color;
 import content.UnoCard.Symbol;
 import java.util.ArrayList;
 
-public class UnoGame {
+public class UnoGame extends Game {
+    
+    public UnoGame(){
+        super("Uno Game");
+    }
+    
+    
     
     public static void main(String[] args) {
         
@@ -25,8 +32,28 @@ public class UnoGame {
         
         one.showDrawPile();
         
+
         
         
+    }
+    
+    //Welcome + Rules of the Game Method
+    
+    
+    
+    //Player Registration Method
+    
+    
+    
+    
+    
+    @Override
+    public void play() {
+        
+    }
+
+    @Override
+    public void declareWinner() {
         
     }
 }
