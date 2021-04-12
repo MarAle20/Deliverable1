@@ -11,12 +11,26 @@ public class GameEngine {
     //Variables to use
     private ArrayList<UnoPlayer> players;
     private int numberOfPlayers = 0;
+    private DrawPile drawPile;
+    private DiscardPile discardPile; 
     
     //Constructor
-    public GameEngine(ArrayList<UnoPlayer> players){
-           this.players = players; 
+    public GameEngine(ArrayList<UnoPlayer> players,DrawPile drawPile,DiscardPile discardPile){
+           this.players = players;
+           this.drawPile = drawPile;
+           this.discardPile = discardPile;
+           drawPile.suffleDrawPile();
     }
 
+    
+    //Method to give players initial 7 UnoCards
+    public void giveAllPlayers7InitialCards(){
+        for(int i = 0 ; i< numberOfPlayers ; i++){
+            drawPile.giveInitial7CardsToPlayer(players.get(i));
+        }
+    }
+    
+    
    
     
     //Method to ask for player names

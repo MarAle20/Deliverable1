@@ -23,14 +23,16 @@ public class UnoGame extends Game {
     public static void main(String[] args) {
         int numberOfPlayers = 0;
         ArrayList<UnoPlayer> players = new ArrayList<>();
-        DrawPile one = new DrawPile();
-        UnoCard card = new UnoCard(Color.RED,Symbol.ONE);
-        
-        System.out.println(one.drawPile.size());
-        System.out.println("-------------------------------");
-        GameEngine gameEngine = new GameEngine(players);
+        DrawPile drawPile = new DrawPile();
+        DiscardPile  discardPile = new DiscardPile();
+
+        System.out.println("---------Player Registration------------");
+        GameEngine gameEngine = new GameEngine(players,drawPile,discardPile);
         gameEngine.playerRegistration();
-    
+        System.out.println("");
+        System.out.println("Giving each user 7 cards");
+        gameEngine.giveAllPlayers7InitialCards();
+
     }
 
     @Override

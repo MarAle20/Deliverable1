@@ -31,8 +31,37 @@ public class DrawPile{
         setUnoDeck();
 
     }
+    //DisplaySize of drawPile 
+    
+    public void sizeOfDrawPile(){
+        System.out.println(drawPile.size());
+    }
+        
+    //give away one card from drawpile.
+    public UnoCard takeCardFromDrawPile(){
+        UnoCard unoCard = drawPile.get(0);
+        drawPile.remove(0);
+        return unoCard;
+    }
+    
+    //Give 7 cards-Used for initial 7 cards for each player hand
+    public void giveInitial7CardsToPlayer(UnoPlayer unoPlayer){
+        PlayerHand playerHand = unoPlayer.getPlayerHand();
+        
+        for (int i= 0;i<7;i++){
+            playerHand.getPlayerHandArray().add(takeCardFromDrawPile());
+        }
+        
+        
+    } 
+    
      
     
+    //Suffle DrawPile
+    public void suffleDrawPile(){
+        groupOfCards.shuffle();
+    }
+
     //Display DrawPileCards
     
     public void showDrawPile(){

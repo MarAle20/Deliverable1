@@ -6,9 +6,10 @@ package content;
 
 import ca.sheridancollege.project.GroupOfCards;
 import ca.sheridancollege.project.Player;
+import java.util.ArrayList;
 
 public class UnoPlayer extends Player {
-    private PlayerHand playerHand;
+    private PlayerHand playerHand = new PlayerHand();
     
     public UnoPlayer(String name){
         super(name);
@@ -22,10 +23,14 @@ public class UnoPlayer extends Player {
         this.playerHand = playerHand;
     }
     
-    public GroupOfCards getPlayerHand(){
-        return playerHand.getPlayerHand();
+    public PlayerHand getPlayerHand(){
+        return this.playerHand;
     }
+    //Display Player Hand
     
+    public void displayPlayerHand(){
+       playerHand.displayPlayerHand(); 
+    }
 
     @Override
     public void play() {
