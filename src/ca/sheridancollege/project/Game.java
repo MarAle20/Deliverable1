@@ -16,12 +16,11 @@ import java.util.ArrayList;
 public abstract class Game 
 {
     private final String gameName;//the title of the game
-    private ArrayList <UnoPlayer> players;// the players of the game
+    private ArrayList <UnoPlayer> players = new ArrayList();// the players of the game
     
     public Game(String givenName)
     {
         gameName = givenName;
-        players = new ArrayList();
     }
 
     /**

@@ -8,45 +8,31 @@ import ca.sheridancollege.project.Game;
 import content.UnoCard.Color;
 import content.UnoCard.Symbol;
 import java.util.ArrayList;
-
+import java.util.InputMismatchException;
+import java.util.Scanner;
 public class UnoGame extends Game {
+    //Game Variables
+    //Players
     
+    //Constructor
     public UnoGame(){
         super("Uno Game");
     }
-    
-    
-    
+
+    //Main method
     public static void main(String[] args) {
-        
+        int numberOfPlayers = 0;
+        ArrayList<UnoPlayer> players = new ArrayList<>();
         DrawPile one = new DrawPile();
         UnoCard card = new UnoCard(Color.RED,Symbol.ONE);
         
-        System.out.println(one.drawPile);
         System.out.println(one.drawPile.size());
         System.out.println("-------------------------------");
-        
-        System.out.println(one.drawPile.get(0).equals(card));
-        
-        System.out.println("------------------------");
-        
-        one.showDrawPile();
-        
-
-        
-        
+        GameEngine gameEngine = new GameEngine(players);
+        gameEngine.playerRegistration();
+    
     }
-    
-    //Welcome + Rules of the Game Method
-    
-    
-    
-    //Player Registration Method
-    
-    
-    
-    
-    
+
     @Override
     public void play() {
         
