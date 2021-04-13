@@ -31,7 +31,7 @@ public class PlayerHand {
     //DisplayPlayerHand
     public void displayPlayerHand(){
         for(int i=0 ; i < playerHand.size();i++){
-            System.out.println("Card No." + (i+1) + " " + playerHand.get(i));
+            System.out.println("Card No." + (i) + " " + playerHand.get(i));
         }
     }   
 

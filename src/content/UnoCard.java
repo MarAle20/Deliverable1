@@ -36,15 +36,6 @@ public class UnoCard extends Card {
         return equal;
     }
     
-    //Campare two cards by themselves. 
-    public boolean equals(UnoCard cardOne, UnoCard two){
-        
-        boolean equal = false;
-        return equal;
-    }
-    
-    
-    
     //Getter & Setter Method for Color and Symbol
     public void setColor(Color color){
         this.color =  color;

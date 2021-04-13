@@ -13,6 +13,7 @@ public class GameEngine {
     private int numberOfPlayers = 0;
     private DrawPile drawPile;
     private DiscardPile discardPile; 
+    private Boolean firstMove = true;
     
     //Constructor
     public GameEngine(ArrayList<UnoPlayer> players,DrawPile drawPile,DiscardPile discardPile){
@@ -37,7 +38,7 @@ public class GameEngine {
         public void playerRegistration(){
         askNumberOfPlayers();
         
-        System.out.println("Register each player with a name:");
+        System.out.println("Register each player with a name");
         
         Scanner scanner = new Scanner(System.in);
         for(int i= 0; i < numberOfPlayers;i++){
